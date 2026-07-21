@@ -28,8 +28,6 @@ body {
   background: var(--bg); color: var(--ink); font-size: 14px;
   -webkit-font-smoothing: antialiased; padding-bottom: 80px;
 }
-
-/* Header */
 header {
   background:#fff; border-bottom:1px solid #EAEAEA; padding:0 28px;
   display:flex; align-items:center; justify-content:space-between;
@@ -55,8 +53,6 @@ header {
   padding:5px 14px; border-radius:100px; font-size:12px; font-weight:700;
   color:#fff; background:var(--org); letter-spacing:.3px;
 }
-
-/* Landing page */
 #landing {
   max-width:680px; margin:80px auto; padding:0 24px; text-align:center;
 }
@@ -73,11 +69,7 @@ header {
 .tc-name { font-size:16px; font-weight:800; }
 .tc-lead { font-size:12px; color:var(--ink-60); }
 .tc-count { font-size:11px; font-weight:700; color:var(--tc); margin-top:4px; }
-
-/* Main layout */
 main { max-width:1320px; margin:0 auto; padding:28px 36px 40px; }
-
-/* Hero banner */
 .hero { padding:28px 0 24px; border-bottom:2px solid #EAEAEA; margin-bottom:22px; }
 .hero-eyebrow {
   font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.4px;
@@ -93,8 +85,6 @@ main { max-width:1320px; margin:0 auto; padding:28px 36px 40px; }
 .hs-val { font-size:26px; font-weight:900; letter-spacing:-1px; color:var(--org); }
 .hs-lbl { font-size:10px; font-weight:700; color:var(--ink-60); text-transform:uppercase; letter-spacing:.8px; }
 .hs-div { width:1px; background:#EAEAEA; align-self:stretch; }
-
-/* Insight strip */
 .insight-strip { display:flex; gap:12px; margin-bottom:18px; flex-wrap:wrap; }
 .ic {
   flex:1; min-width:200px; display:flex; align-items:flex-start; gap:12px;
@@ -111,8 +101,6 @@ main { max-width:1320px; margin:0 auto; padding:28px 36px 40px; }
 .ic.watch .ic-label { color:var(--amber); }
 .ic-text { font-size:13px; color:var(--ink); font-weight:700; line-height:1.4; margin-bottom:2px; }
 .ic-sub  { font-size:11.5px; color:var(--ink-60); line-height:1.5; }
-
-/* KPI row */
 .kpi-row { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:16px; }
 .kpi {
   background:#fff; border-radius:18px; padding:22px 20px; border:1px solid #EAEAEA;
@@ -123,8 +111,6 @@ main { max-width:1320px; margin:0 auto; padding:28px 36px 40px; }
 .kpi-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--ink-60); }
 .kpi-value { font-size:36px; font-weight:900; line-height:1; color:var(--ink); letter-spacing:-1.5px; }
 .kpi-sub   { font-size:12px; color:var(--ink-60); }
-
-/* Cards */
 .card {
   background:#fff; border-radius:18px; padding:24px 26px;
   border:1px solid #EAEAEA; box-shadow:0 1px 3px rgba(34,37,37,.06);
@@ -137,12 +123,8 @@ main { max-width:1320px; margin:0 auto; padding:28px 36px 40px; }
 }
 .note-lbl { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--teal); display:block; margin-bottom:2px; }
 .chart-wrap { position:relative; height:200px; }
-
-/* Grids */
 .charts-row { display:grid; grid-template-columns:1.4fr 1fr; gap:14px; margin-bottom:14px; }
 .tables-row { display:grid; grid-template-columns:1.6fr 1fr; gap:14px; margin-bottom:14px; }
-
-/* Tables */
 .tbl-scroll { overflow:auto; max-height:320px; }
 table { width:100%; border-collapse:collapse; font-size:12.5px; }
 thead th {
@@ -162,16 +144,12 @@ td:not(:first-child) { text-align:right; }
 .bg-red   { background:#FFF3EF; color:#D93025; }
 .bg-gray  { background:#F0F0F0; color:#6C6C72; }
 .lvl { display:inline-block; padding:1px 7px; border-radius:10px; font-size:11px; font-weight:700; background:#F0F0F0; color:var(--ink-60); }
-
-/* Aging */
 .aging-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #EAEAEA; }
 .aging-row:last-child { border-bottom:none; }
 .aging-lbl { font-size:12.5px; flex:1; }
 .aging-cnt { font-size:17px; font-weight:800; width:30px; text-align:right; }
 .aging-bar { flex:2; height:7px; background:#EAEAEA; border-radius:4px; overflow:hidden; }
 .aging-fill{ height:100%; border-radius:4px; }
-
-/* Bottom bar */
 #bb {
   position:fixed; bottom:0; left:0; right:0; background:#222525; color:#fff;
   height:52px; display:flex; align-items:center; justify-content:center; gap:36px; z-index:300;
@@ -180,8 +158,6 @@ td:not(:first-child) { text-align:right; }
 .bb-v { font-size:18px; font-weight:900; letter-spacing:-.5px; }
 .bb-l { font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:.9px; opacity:.5; }
 .bb-sep { width:1px; height:24px; background:rgba(255,255,255,.15); }
-
-/* Loading */
 #loading {
   position:fixed; inset:0; background:rgba(248,245,242,.94); display:flex;
   align-items:center; justify-content:center; z-index:500; flex-direction:column; gap:14px;
@@ -192,8 +168,6 @@ td:not(:first-child) { text-align:right; }
 }
 @keyframes spin { to { transform:rotate(360deg); } }
 .load-msg { font-size:13px; color:var(--ink-60); font-weight:600; }
-
-/* Responsive */
 @media (max-width:900px) {
   .kpi-row { grid-template-columns:repeat(3,1fr); }
   .charts-row, .tables-row { grid-template-columns:1fr; }
@@ -205,34 +179,22 @@ td:not(:first-child) { text-align:right; }
 </style>
 </head>
 <body>
-
 <div aria-hidden="true" style="position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden">
   <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
-        <circle cx="2" cy="2" r="1.5" fill="#0A8080"/>
-      </pattern>
-    </defs>
+    <defs><pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#0A8080"/></pattern></defs>
     <rect width="100%" height="100%" fill="url(#dots)" opacity="0.07"/>
   </svg>
 </div>
 <canvas id="bgC" aria-hidden="true" style="position:fixed;inset:0;z-index:-1;pointer-events:none;width:100%;height:100%"></canvas>
-
-<div id="loading">
-  <div class="spin"></div>
-  <div class="load-msg" id="loadMsg">Loading live data from Greenhouse…</div>
-</div>
-
+<div id="loading"><div class="spin"></div><div class="load-msg" id="loadMsg">Loading live data…</div></div>
 <header>
   <div class="logo">
     <div class="logo-mark" id="logoMark">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="white">
-        <path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.35C17.25 23.15 21 18.25 21 13V7l-9-5z"/>
-      </svg>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.35C17.25 23.15 21 18.25 21 13V7l-9-5z"/></svg>
     </div>
     <div>
       <div class="logo-text">Recruiter Snapshot</div>
-      <div class="logo-sub" id="logoSub">Invite · Live from Greenhouse</div>
+      <div class="logo-sub">Invite · Live from Greenhouse</div>
     </div>
   </div>
   <div class="hdr-right">
@@ -241,18 +203,16 @@ td:not(:first-child) { text-align:right; }
     <button class="reload-btn" onclick="loadData()">&#8635; Reload</button>
   </div>
 </header>
-
 <div id="landing" style="display:none">
   <div class="landing-title">Recruiter Snapshots</div>
   <div class="landing-sub">Select a team to view their live hiring dashboard</div>
   <div class="team-grid" id="teamGrid"></div>
 </div>
-
 <main id="dashboard" style="display:none">
   <div class="hero">
     <div class="hero-eyebrow" id="hEyebrow">INVITE RECRUITING</div>
-    <div class="hero-name"    id="hName">—</div>
-    <div class="hero-sub"     id="hSub">—</div>
+    <div class="hero-name" id="hName">—</div>
+    <div class="hero-sub" id="hSub">—</div>
     <div class="hero-stats">
       <div class="hs"><div class="hs-val" id="hHC">—</div><div class="hs-lbl">Open Reqs</div></div>
       <div class="hs-div"></div>
@@ -263,54 +223,22 @@ td:not(:first-child) { text-align:right; }
       <div class="hs"><div class="hs-val" id="hPend">—</div><div class="hs-lbl">Pending</div></div>
     </div>
   </div>
-
   <div class="insight-strip">
-    <div class="ic win">
-      <div class="ic-icon">🏆</div>
-      <div><div class="ic-label">Win</div><div class="ic-text" id="iWinT">—</div><div class="ic-sub" id="iWinS"></div></div>
-    </div>
-    <div class="ic risk">
-      <div class="ic-icon">⚠️</div>
-      <div><div class="ic-label">Risk</div><div class="ic-text" id="iRiskT">—</div><div class="ic-sub" id="iRiskS"></div></div>
-    </div>
-    <div class="ic watch">
-      <div class="ic-icon">👀</div>
-      <div><div class="ic-label">Watch</div><div class="ic-text" id="iWatchT">—</div><div class="ic-sub" id="iWatchS"></div></div>
-    </div>
+    <div class="ic win"><div class="ic-icon">🏆</div><div><div class="ic-label">Win</div><div class="ic-text" id="iWinT">—</div><div class="ic-sub" id="iWinS"></div></div></div>
+    <div class="ic risk"><div class="ic-icon">⚠️</div><div><div class="ic-label">Risk</div><div class="ic-text" id="iRiskT">—</div><div class="ic-sub" id="iRiskS"></div></div></div>
+    <div class="ic watch"><div class="ic-icon">👀</div><div><div class="ic-label">Watch</div><div class="ic-text" id="iWatchT">—</div><div class="ic-sub" id="iWatchS"></div></div></div>
   </div>
-
   <div class="kpi-row">
-    <div class="kpi accent">
-      <div class="kpi-label">Open Reqs</div>
-      <div class="kpi-value" id="kHC">—</div>
-      <div class="kpi-sub">Active headcount</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Offers Extended</div>
-      <div class="kpi-value" id="kTotal">—</div>
-      <div class="kpi-sub">This quarter</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Accepted</div>
-      <div class="kpi-value" id="kAcc">—</div>
-      <div class="kpi-sub">Offers accepted</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">OAR</div>
-      <div class="kpi-value" id="kOAR">—</div>
-      <div class="kpi-sub">Acceptance rate</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-label">Pending</div>
-      <div class="kpi-value" id="kPend">—</div>
-      <div class="kpi-sub">Awaiting decision</div>
-    </div>
+    <div class="kpi accent"><div class="kpi-label">Open Reqs</div><div class="kpi-value" id="kHC">—</div><div class="kpi-sub">Active headcount</div></div>
+    <div class="kpi"><div class="kpi-label">Offers Extended</div><div class="kpi-value" id="kTotal">—</div><div class="kpi-sub">This quarter</div></div>
+    <div class="kpi"><div class="kpi-label">Accepted</div><div class="kpi-value" id="kAcc">—</div><div class="kpi-sub">Offers accepted</div></div>
+    <div class="kpi"><div class="kpi-label">OAR</div><div class="kpi-value" id="kOAR">—</div><div class="kpi-sub">Acceptance rate</div></div>
+    <div class="kpi"><div class="kpi-label">Pending</div><div class="kpi-value" id="kPend">—</div><div class="kpi-sub">Awaiting decision</div></div>
   </div>
-
   <div class="charts-row">
     <div class="card">
       <div class="card-title">Offer Status Breakdown</div>
-      <div class="card-sub">Current quarter — accepted, declined, pending</div>
+      <div class="card-sub">Accepted, declined, pending</div>
       <div class="chart-wrap"><canvas id="statusChart"></canvas></div>
       <div class="card-note"><span class="note-lbl">💡 Funnel</span><span id="statusNote"></span></div>
     </div>
@@ -321,30 +249,18 @@ td:not(:first-child) { text-align:right; }
       <div class="card-note"><span class="note-lbl">💡 Level Mix</span><span id="levelNote"></span></div>
     </div>
   </div>
-
   <div class="tables-row">
     <div class="card">
       <div class="card-title">Open Headcount</div>
       <div class="card-sub" id="hcSub">—</div>
-      <div class="tbl-scroll">
-        <table>
-          <thead><tr><th>Role</th><th>Level</th><th>Team</th><th>PE</th><th>Age</th></tr></thead>
-          <tbody id="hcBody"></tbody>
-        </table>
-      </div>
+      <div class="tbl-scroll"><table><thead><tr><th>Role</th><th>Level</th><th>Team</th><th>PE</th><th>Age</th></tr></thead><tbody id="hcBody"></tbody></table></div>
     </div>
     <div class="card">
       <div class="card-title">Accepted Offers</div>
       <div class="card-sub" id="accSub">—</div>
-      <div class="tbl-scroll">
-        <table>
-          <thead><tr><th>Candidate</th><th>Role</th><th>Accepted</th></tr></thead>
-          <tbody id="accBody"></tbody>
-        </table>
-      </div>
+      <div class="tbl-scroll"><table><thead><tr><th>Candidate</th><th>Role</th><th>Accepted</th></tr></thead><tbody id="accBody"></tbody></table></div>
     </div>
   </div>
-
   <div class="card">
     <div class="card-title">Open Req Aging</div>
     <div class="card-sub">Days since recruiting start date</div>
@@ -352,7 +268,6 @@ td:not(:first-child) { text-align:right; }
     <div class="card-note"><span class="note-lbl">⏱ Backlog</span><span id="agingNote"></span></div>
   </div>
 </main>
-
 <div id="bb" style="display:none">
   <div class="bb-s"><div class="bb-v" id="bbHC">—</div><div class="bb-l">Open Reqs</div></div>
   <div class="bb-sep"></div>
@@ -364,7 +279,6 @@ td:not(:first-child) { text-align:right; }
   <div class="bb-sep"></div>
   <div class="bb-s"><div class="bb-v" id="bbRec">—</div><div class="bb-l">Recruiters</div></div>
 </div>
-
 <script>
 (function(){
   const c=document.getElementById('bgC'),ctx=c.getContext('2d');
@@ -401,28 +315,23 @@ td:not(:first-child) { text-align:right; }
 })();
 
 const TEAMS=[
-  {key:'Engineering', name:'Engineering', lead:'Jaime Tavarez',   color:'#F45D48',
-   recruiters:new Set(['Ellison DeCastro','Jeff Dunn','Jacob Epstein','Mike Galligan',
-     'Jeff Myers','Khetsun Tenzin','Rose Fadawi','Angeline Lo','Nicholas Watson','Kevin Gadd'])},
-  {key:'GTM',         name:'GTM',         lead:'Lisa Pham',       color:'#0A8080',
+  {key:'Engineering',name:'Engineering',lead:'Jaime Tavarez',color:'#F45D48',
+   recruiters:new Set(['Ellison DeCastro','Jeff Dunn','Jacob Epstein','Mike Galligan','Jeff Myers','Khetsun Tenzin','Rose Fadawi','Angeline Lo','Nicholas Watson','Kevin Gadd'])},
+  {key:'GTM',name:'GTM',lead:'Lisa Pham',color:'#0A8080',
    recruiters:new Set(['Gina Panacci','John Thomas','Grace Stoughton','William Brown'])},
-  {key:'CX',          name:'CX',          lead:'Michelle Cordray',color:'#6B55D6',
+  {key:'CX',name:'CX',lead:'Michelle Cordray',color:'#6B55D6',
    recruiters:new Set(['Molly Menotti','Hannah Muhonen','Kristin Dixon','Kelly Reyes','Addison Koback'])},
-  {key:'SpecTech',    name:'SpecTech',    lead:'Kebone Moloko',   color:'#D97706',
-   recruiters:new Set(['Jeremy Murdy','Janielle Rodriguez','Bri Majors','Abby Wagner',
-     'Alvin Ye','Ashleigh Huffman','Mallory Montanez'])},
-  {key:'Foundation',  name:'Foundation',  lead:'Teresa Waggoner', color:'#10B981',
-   recruiters:new Set(['Nico Talaugon','Dylan Cook','Helen Oh','Paul West','Staci Birkel',
-     'Chelsea Roussey','Safi Hasseeb','Merriam Yunus','Shayna Siemer',
-     'Natasha Ovsyannikova','Isabel Macias'])},
+  {key:'SpecTech',name:'SpecTech',lead:'Kebone Moloko',color:'#D97706',
+   recruiters:new Set(['Jeremy Murdy','Janielle Rodriguez','Bri Majors','Abby Wagner','Alvin Ye','Ashleigh Huffman','Mallory Montanez'])},
+  {key:'Foundation',name:'Foundation',lead:'Teresa Waggoner',color:'#10B981',
+   recruiters:new Set(['Nico Talaugon','Dylan Cook','Helen Oh','Paul West','Staci Birkel','Chelsea Roussey','Safi Hasseeb','Merriam Yunus','Shayna Siemer','Natasha Ovsyannikova','Isabel Macias'])},
 ];
-
 const SHEET='1rv6HDEAH5s13rxVNC0F20TUVuLv7EIHMVWKOkap0CS4';
 let DATA={offers:[],hc:[]};
 let statusChart=null,levelChart=null;
 
-const urlParam = new URLSearchParams(window.location.search).get('team')||'';
-const TEAM = TEAMS.find(t=>t.key.toLowerCase()===urlParam.toLowerCase()) || null;
+const urlParam=new URLSearchParams(window.location.search).get('team')||'';
+const TEAM=TEAMS.find(t=>t.key.toLowerCase()===urlParam.toLowerCase())||null;
 
 if(TEAM){
   document.documentElement.style.setProperty('--org',TEAM.color);
@@ -432,7 +341,7 @@ if(TEAM){
   document.getElementById('dashboard').style.display='';
   document.getElementById('bb').style.display='flex';
   document.title='Recruiter Snapshot · '+TEAM.name;
-} else {
+}else{
   document.getElementById('loading').style.display='none';
   document.getElementById('landing').style.display='';
   const grid=document.getElementById('teamGrid');
@@ -442,53 +351,63 @@ if(TEAM){
     a.className='team-card';
     a.href=base+'?team='+t.key;
     a.style.setProperty('--tc',t.color);
-    a.innerHTML=`<div class="tc-dot"></div>
-      <div class="tc-name">${t.name}</div>
-      <div class="tc-lead">${t.lead}</div>
-      <div class="tc-count">${t.recruiters.size} recruiters</div>`;
+    a.innerHTML=`<div class="tc-dot"></div><div class="tc-name">${t.name}</div><div class="tc-lead">${t.lead}</div><div class="tc-count">${t.recruiters.size} recruiters</div>`;
     grid.appendChild(a);
   });
 }
 
-function parseSheet(raw){
-  const lines=raw.split('\n');
-  let hi=-1;
-  for(let i=0;i<lines.length;i++){
-    const l=lines[i];
-    if((l.includes('Status (Offer)')&&l.includes('Recruiter'))||
-       (l.startsWith('Job Name\t')&&l.includes('Hiring PE'))){hi=i;break;}
+/* Google Sheets gviz JSONP — works on any static host, no window.cowork needed */
+function fetchSheetGviz(sheetName){
+  return new Promise((resolve,reject)=>{
+    const cb='_gviz_'+Math.random().toString(36).substr(2,9);
+    const script=document.createElement('script');
+    window[cb]=function(resp){
+      delete window[cb];script.remove();
+      if(!resp||resp.status==='error')
+        reject(new Error(resp?.errors?.[0]?.detailed_message||'Sheet access error'));
+      else resolve(resp.table);
+    };
+    script.src=`https://docs.google.com/spreadsheets/d/${SHEET}/gviz/tq?tqx=out:json;callback:${cb}&sheet=${encodeURIComponent(sheetName)}&headers=0`;
+    script.onerror=()=>reject(new Error('Could not load "'+sheetName+'" — is the sheet set to Anyone with link can view?'));
+    document.head.appendChild(script);
+  });
+}
+
+/* Find header row by content, handles any number of metadata rows */
+function parseGvizTable(table,isOffers){
+  if(!table||!table.rows)return[];
+  let headerIdx=-1,headers=[];
+  for(let i=0;i<table.rows.length;i++){
+    const row=table.rows[i];
+    if(!row||!row.c)continue;
+    const vals=row.c.map(c=>c?String(c.v??'').trim():'');
+    const joined=vals.join('\t');
+    if(isOffers?(joined.includes('Status (Offer)')&&joined.includes('Recruiter'))
+               :(joined.includes('Job Name')&&joined.includes('Hiring PE'))){
+      headers=vals;headerIdx=i;break;
+    }
   }
-  if(hi===-1)return[];
-  const headers=lines[hi].split('\t').map(h=>h.trim());
+  if(headerIdx===-1)return[];
   const rows=[];
-  for(let i=hi+1;i<lines.length;i++){
-    const cells=lines[i].split('\t');
-    if(cells.every(c=>!c.trim()))continue;
+  for(let i=headerIdx+1;i<table.rows.length;i++){
+    const row=table.rows[i];
+    if(!row||!row.c)continue;
+    const cells=row.c.map(c=>c?String(c.f??c.v??'').trim():'');
+    if(cells.every(c=>!c))continue;
     const obj={};
-    headers.forEach((h,j)=>{obj[h]=(cells[j]||'').trim();});
+    headers.forEach((h,j)=>{obj[h]=cells[j]||'';});
     rows.push(obj);
   }
   return rows;
 }
-function daysSince(ds){
-  if(!ds)return null;
-  const d=new Date(ds);if(isNaN(d))return null;
-  return Math.floor((Date.now()-d)/86400000);
-}
-function fmtDate(ds){
-  if(!ds)return'—';
-  const d=new Date(ds);if(isNaN(d))return ds;
-  return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
-}
+
+function daysSince(ds){if(!ds)return null;const d=new Date(ds);if(isNaN(d))return null;return Math.floor((Date.now()-d)/86400000);}
+function fmtDate(ds){if(!ds)return'—';const d=new Date(ds);if(isNaN(d))return ds;return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});}
 function countUp(el,n,sfx='',dur=500){
   if(!el)return;
   if(isNaN(parseFloat(n))){el.textContent=n;return;}
   const num=parseFloat(n),start=performance.now();
-  function step(now){
-    const p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3);
-    el.textContent=(Number.isInteger(num)?Math.round(num*e):(num*e).toFixed(1))+sfx;
-    if(p<1)requestAnimationFrame(step);
-  }
+  function step(now){const p=Math.min((now-start)/dur,1),e=1-Math.pow(1-p,3);el.textContent=(Number.isInteger(num)?Math.round(num*e):(num*e).toFixed(1))+sfx;if(p<1)requestAnimationFrame(step);}
   requestAnimationFrame(step);
 }
 function $id(id){return document.getElementById(id);}
@@ -498,21 +417,16 @@ async function loadData(){
   $id('loading').style.display='flex';
   $id('loadMsg').textContent='Loading live data from Greenhouse…';
   try{
-    const [oRes,hRes]=await Promise.all([
-      window.cowork.callMcpTool('mcp__c61042c2-2fb3-4e2e-888c-dce52a6a8c86__fetch',
-        {spreadsheet_id:SHEET,sheet_name:'Offers'}),
-      window.cowork.callMcpTool('mcp__c61042c2-2fb3-4e2e-888c-dce52a6a8c86__fetch',
-        {spreadsheet_id:SHEET,sheet_name:'Open Reqs'}),
+    const [offersTable,hcTable]=await Promise.all([
+      fetchSheetGviz('Offers'),
+      fetchSheetGviz('Open Reqs'),
     ]);
-    const od=oRes.structuredContent??JSON.parse(oRes.content[0].text);
-    const hd=hRes.structuredContent??JSON.parse(hRes.content[0].text);
-    DATA.offers=parseSheet(od.content||'');
-    DATA.hc    =parseSheet(hd.content||'');
-    const m=(od.content||'').match(/Last Updated At\s+(.+?)(?:\n|$)/);
-    $id('asOf').textContent=m?m[1].trim():new Date().toLocaleDateString();
+    DATA.offers=parseGvizTable(offersTable,true);
+    DATA.hc    =parseGvizTable(hcTable,false);
+    $id('asOf').textContent=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
     renderTeam();
   }catch(err){
-    $id('loadMsg').textContent='⚠ Failed to load: '+err.message;
+    $id('loadMsg').textContent='⚠ '+err.message;
     console.error(err);return;
   }
   $id('loading').style.display='none';
@@ -521,40 +435,25 @@ async function loadData(){
 function renderTeam(){
   const rec=TEAM.recruiters;
   const offers=DATA.offers.filter(r=>rec.has(r['Recruiter']));
-  const hc    =DATA.hc.filter(r=>rec.has(r['Hiring PE']));
-  const acc =offers.filter(r=>r['Status (Offer)'].toLowerCase()==='accepted');
-  const rej =offers.filter(r=>r['Status (Offer)'].toLowerCase()==='rejected');
+  const hc=DATA.hc.filter(r=>rec.has(r['Hiring PE']));
+  const acc=offers.filter(r=>r['Status (Offer)'].toLowerCase()==='accepted');
+  const rej=offers.filter(r=>r['Status (Offer)'].toLowerCase()==='rejected');
   const pend=offers.filter(r=>['sent','created'].includes(r['Status (Offer)'].toLowerCase()));
   const total=acc.length+rej.length+pend.length;
   const oarN=(acc.length+rej.length)>0?Math.round(acc.length/(acc.length+rej.length)*100):0;
   const oarS=oarN+'%';
-
   $id('hEyebrow').textContent='INVITE RECRUITING · '+TEAM.name.toUpperCase();
   $id('hName').textContent=TEAM.name+' Team';
   $id('hSub').textContent='Lead: '+TEAM.lead+' · '+rec.size+' recruiters';
-  countUp($id('hHC'),hc.length);
-  countUp($id('hAcc'),acc.length);
-  $id('hOAR').textContent=oarS;
-  countUp($id('hPend'),pend.length);
-
-  countUp($id('kHC'),hc.length);
-  countUp($id('kTotal'),total);
-  countUp($id('kAcc'),acc.length);
-  $id('kOAR').textContent=oarS;
-  countUp($id('kPend'),pend.length);
-
-  $id('bbHC').textContent=hc.length;
-  $id('bbAcc').textContent=acc.length;
-  $id('bbOAR').textContent=oarS;
-  $id('bbPend').textContent=pend.length;
-  $id('bbRec').textContent=rec.size;
-
+  countUp($id('hHC'),hc.length);countUp($id('hAcc'),acc.length);
+  $id('hOAR').textContent=oarS;countUp($id('hPend'),pend.length);
+  countUp($id('kHC'),hc.length);countUp($id('kTotal'),total);
+  countUp($id('kAcc'),acc.length);$id('kOAR').textContent=oarS;countUp($id('kPend'),pend.length);
+  $id('bbHC').textContent=hc.length;$id('bbAcc').textContent=acc.length;
+  $id('bbOAR').textContent=oarS;$id('bbPend').textContent=pend.length;$id('bbRec').textContent=rec.size;
   renderInsights(hc,acc,rej,pend,oarN);
   renderStatusChart(acc.length,rej.length,pend.length);
-  renderLevelChart(hc);
-  renderHCTable(hc);
-  renderAccTable(acc);
-  renderAging(hc);
+  renderLevelChart(hc);renderHCTable(hc);renderAccTable(acc);renderAging(hc);
 }
 
 function renderInsights(hc,acc,rej,pend,oarN){
@@ -563,14 +462,12 @@ function renderInsights(hc,acc,rej,pend,oarN){
   else if(acc.length>0){wt=`${acc.length} offer${acc.length>1?'s':''} accepted this quarter`;ws=`${TEAM.name} closing at ${oarN}% OAR.`;}
   else{wt='No accepted offers yet';ws='Track offers in Greenhouse to see trends here.';}
   $id('iWinT').textContent=wt;$id('iWinS').textContent=ws;
-
   let rt,rs;
   const stale=hc.filter(r=>(daysSince(r['Recruiting Start Date'])||0)>60);
   if(stale.length>0){rt=`${stale.length} req${stale.length>1?'s':''} open 60+ days`;rs=stale.slice(0,2).map(r=>(r['Job Name']||'Unnamed').substring(0,32)).join(', ')+(stale.length>2?` +${stale.length-2} more`:'');}
   else if(oarN>0&&oarN<60){rt=`${oarN}% OAR is below target`;rs=`${rej.length} offers declined — revisit comp strategy.`;}
   else{rt=`${hc.length} open req${hc.length>1?'s':''} in flight`;rs='Monitor time-to-fill to prevent backlog.';}
   $id('iRiskT').textContent=rt;$id('iRiskS').textContent=rs;
-
   let wct,wcs;
   if(pend.length>=3){wct=`${pend.length} offers pending a decision`;wcs='Follow up to accelerate close rate.';}
   else if(rej.length>acc.length&&rej.length>0){wct=`${rej.length} offers declined vs ${acc.length} accepted`;wcs='Investigate decline reasons to improve conversion.';}
@@ -582,14 +479,11 @@ function renderStatusChart(a,r,p){
   if(statusChart)statusChart.destroy();
   statusChart=new Chart($id('statusChart'),{
     type:'bar',
-    data:{labels:['Accepted','Declined','Pending'],
-      datasets:[{data:[a,r,p],backgroundColor:[TEAM.color,'#D93025','#D97706'],borderRadius:8,borderSkipped:false,barPercentage:.55}]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(17,17,17,.88)',titleFont:{size:12,weight:'700'},bodyFont:{size:12},padding:10,cornerRadius:8}},
-      scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'#F3F4F6',lineWidth:1},ticks:{font:{size:11},stepSize:1},border:{dash:[3,3]}}}}
+    data:{labels:['Accepted','Declined','Pending'],datasets:[{data:[a,r,p],backgroundColor:[TEAM.color,'#D93025','#D97706'],borderRadius:8,borderSkipped:false,barPercentage:.55}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(17,17,17,.88)',titleFont:{size:12,weight:'700'},bodyFont:{size:12},padding:10,cornerRadius:8}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'#F3F4F6',lineWidth:1},ticks:{font:{size:11},stepSize:1},border:{dash:[3,3]}}}}
   });
   const tot=a+r+p;
-  $id('statusNote').textContent=tot===0?'No offers recorded yet this quarter.':`${a} accepted of ${a+r} decided. ${tot} total extended this quarter.`;
+  $id('statusNote').textContent=tot===0?'No offers recorded yet.':`${a} accepted of ${a+r} decided. ${tot} total extended.`;
 }
 
 function renderLevelChart(hc){
@@ -599,15 +493,11 @@ function renderLevelChart(hc){
   const sorted=Object.entries(counts).sort((a,b)=>a[0].localeCompare(b[0]));
   levelChart=new Chart($id('levelChart'),{
     type:'bar',
-    data:{labels:sorted.map(e=>e[0].replace('Level ','L')),
-      datasets:[{data:sorted.map(e=>e[1]),backgroundColor:TEAM.color+'cc',borderRadius:8,borderSkipped:false,barPercentage:.6}]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(17,17,17,.88)',titleFont:{size:12,weight:'700'},bodyFont:{size:12},padding:10,cornerRadius:8}},
-      scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'#F3F4F6',lineWidth:1},ticks:{font:{size:11},stepSize:1},border:{dash:[3,3]}}}}
+    data:{labels:sorted.map(e=>e[0].replace('Level ','L')),datasets:[{data:sorted.map(e=>e[1]),backgroundColor:TEAM.color+'cc',borderRadius:8,borderSkipped:false,barPercentage:.6}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(17,17,17,.88)',titleFont:{size:12,weight:'700'},bodyFont:{size:12},padding:10,cornerRadius:8}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'#F3F4F6',lineWidth:1},ticks:{font:{size:11},stepSize:1},border:{dash:[3,3]}}}}
   });
   const top=sorted.sort((a,b)=>b[1]-a[1])[0];
-  $id('levelNote').textContent=hc.length===0?'No open reqs for this team.'
-    :`${hc.length} open req${hc.length!==1?'s':''} across ${sorted.length} level${sorted.length!==1?'s':''}.`+(top?` Most open: ${top[0].replace('Level ','L')} (${top[1]}).`:'');
+  $id('levelNote').textContent=hc.length===0?'No open reqs for this team.':`${hc.length} open req${hc.length!==1?'s':''} across ${sorted.length} level${sorted.length!==1?'s':''}.`+(top?` Most open: ${top[0].replace('Level ','L')} (${top[1]}).`:'');
 }
 
 function renderHCTable(hc){
@@ -617,12 +507,11 @@ function renderHCTable(hc){
   $id('hcBody').innerHTML=sorted.map(r=>{
     const d=daysSince(r['Recruiting Start Date']);
     const ageCls=d===null?'bg-gray':d>60?'bg-red':d>30?'bg-amber':'bg-green';
-    const job=r['Job Name']||'—';
-    const shortJob=job.length>36?job.substring(0,36)+'…':job;
+    const job=r['Job Name']||'—';const shortJob=job.length>36?job.substring(0,36)+'…':job;
     const lv=(r['Level']||'—').replace('Level ','L');
-    const team_name=(r['FDS Team']||r['FDS Sub Team']||'—').substring(0,22);
+    const tn=(r['FDS Team']||r['FDS Sub Team']||'—').substring(0,22);
     const pe=(r['Hiring PE']||'—').split(' ')[0];
-    return`<tr><td title="${job}" style="font-weight:600;max-width:200px">${shortJob}</td><td><span class="lvl">${lv}</span></td><td style="color:var(--ink-60);font-size:12px">${team_name}</td><td style="color:var(--ink-60);font-size:12px">${pe}</td><td><span class="badge ${ageCls}">${d===null?'—':d+'d'}</span></td></tr>`;
+    return`<tr><td title="${job}" style="font-weight:600;max-width:200px">${shortJob}</td><td><span class="lvl">${lv}</span></td><td style="color:var(--ink-60);font-size:12px">${tn}</td><td style="color:var(--ink-60);font-size:12px">${pe}</td><td><span class="badge ${ageCls}">${d===null?'—':d+'d'}</span></td></tr>`;
   }).join('');
 }
 
@@ -632,18 +521,17 @@ function renderAccTable(acc){
   const sorted=acc.slice().sort((a,b)=>new Date(b['Resolved']||0)-new Date(a['Resolved']||0));
   $id('accBody').innerHTML=sorted.slice(0,20).map(r=>{
     const name=((r['First Name']||'')+' '+(r['Last Name']||'')).trim()||'—';
-    const job=r['Job Name']||'—';
-    const shortJob=job.length>26?job.substring(0,26)+'…':job;
+    const job=r['Job Name']||'—';const shortJob=job.length>26?job.substring(0,26)+'…':job;
     return`<tr><td style="font-weight:600">${name}</td><td title="${job}" style="color:var(--ink-60);font-size:12px">${shortJob}</td><td><span class="badge bg-green">${fmtDate(r['Resolved'])}</span></td></tr>`;
   }).join('');
 }
 
 function renderAging(hc){
   const buckets=[
-    {lbl:'0–30 days',color:'#0A8080',min:0, max:30,  n:0},
-    {lbl:'31–60 days',color:'#D97706',min:31,max:60,  n:0},
-    {lbl:'61–90 days',color:'#EA580C',min:61,max:90,  n:0},
-    {lbl:'90+ days',  color:'#DC2626',min:91,max:9999,n:0},
+    {lbl:'0–30 days',color:'#0A8080',min:0,max:30,n:0},
+    {lbl:'31–60 days',color:'#D97706',min:31,max:60,n:0},
+    {lbl:'61–90 days',color:'#EA580C',min:61,max:90,n:0},
+    {lbl:'90+ days',color:'#DC2626',min:91,max:9999,n:0},
     {lbl:'No start date',color:'#EAEAEA',min:-1,max:-1,n:0},
   ];
   hc.forEach(r=>{
@@ -660,12 +548,10 @@ function renderAging(hc){
     </div>`).join('');
   if(!hc.length)$id('agingWrap').innerHTML='<div style="color:var(--ink-60);padding:12px 0;font-size:13px">No open reqs to display.</div>';
   const stale=buckets.filter(b=>b.min>=61).reduce((s,b)=>s+b.n,0);
-  $id('agingNote').textContent=stale>0?`${stale} req${stale>1?'s':''} open 60+ days — consider escalating or re-scoping.`
-    :hc.length>0?`${hc.length} req${hc.length>1?'s':''} — all within healthy aging range.`
-    :'No open reqs to analyze.';
+  $id('agingNote').textContent=stale>0?`${stale} req${stale>1?'s':''} open 60+ days — consider escalating or re-scoping.`:hc.length>0?`${hc.length} req${hc.length>1?'s':''} — all within healthy aging range.`:'No open reqs to analyze.';
 }
 
-if(TEAM) loadData();
+if(TEAM)loadData();
 </script>
 </body>
 </html>
