@@ -97,6 +97,7 @@ td:not(:first-child){text-align:right;}
 .spin{width:36px;height:36px;border:3px solid #EAEAEA;border-top-color:var(--org);border-radius:50%;animation:spin .8s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .load-msg{font-size:13px;color:var(--ink-60);font-weight:600;}
+.load-hint{font-size:11px;color:var(--ink-60);max-width:360px;text-align:center;line-height:1.6;}
 @media(max-width:900px){.kpi-row{grid-template-columns:repeat(3,1fr);}.charts-row,.tables-row{grid-template-columns:1fr;}}
 @media(max-width:600px){.kpi-row{grid-template-columns:1fr 1fr;}main{padding:16px 14px 40px;}}
 </style>
@@ -104,7 +105,7 @@ td:not(:first-child){text-align:right;}
 <body>
 <div aria-hidden="true" style="position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#0A8080"/></pattern></defs><rect width="100%" height="100%" fill="url(#dots)" opacity="0.07"/></svg></div>
 <canvas id="bgC" aria-hidden="true" style="position:fixed;inset:0;z-index:-1;pointer-events:none;width:100%;height:100%"></canvas>
-<div id="loading"><div class="spin"></div><div class="load-msg" id="loadMsg">Loading live data from Greenhouse…</div></div>
+<div id="loading"><div class="spin"></div><div class="load-msg" id="loadMsg">Loading live data from Greenhouse…</div><div class="load-hint" id="loadHint"></div></div>
 <header>
   <div class="logo">
     <div class="logo-mark" id="logoMark"><svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.35C17.25 23.15 21 18.25 21 13V7l-9-5z"/></svg></div>
@@ -208,15 +209,24 @@ if(TEAM){
 
 const SCRIPT_URL='https://script.google.com/a/macros/gusto.com/s/AKfycbziVMSjCzvW0w1quwgcUHrkjK7CGi9hBl76WXdeXEK3eN1gVPWjolzTC7UXC69fqGyS/exec';
 
-function fetchSheet(sheetName){
-  return new Promise((resolve,reject)=>{
-    const cb='_cb_'+Math.random().toString(36).substr(2,9);
-    const script=document.createElement('script');
-    window[cb]=function(resp){delete window[cb];script.remove();resolve(resp.data||[]);};
-    script.src=SCRIPT_URL+'?sheet='+encodeURIComponent(sheetName)+'&callback='+cb;
-    script.onerror=()=>reject(new Error('Failed to load "'+sheetName+'"'));
-    document.head.appendChild(script);
-  });
+async function fetchSheet(sheetName){
+  const url=SCRIPT_URL+'?sheet='+encodeURIComponent(sheetName);
+  const ctrl=new AbortController();
+  const timer=setTimeout(()=>ctrl.abort(),15000);
+  try{
+    const r=await fetch(url,{signal:ctrl.signal});
+    clearTimeout(timer);
+    if(!r.ok) throw new Error('HTTP '+r.status+' — check Apps Script deployment');
+    const json=await r.json();
+    return json.data||[];
+  }catch(e){
+    clearTimeout(timer);
+    if(e.name==='AbortError') throw new Error('Request timed out. Open the Apps Script URL directly in your browser to verify it works.');
+    if(e.message.includes('Failed to fetch')||e.message.includes('NetworkError')){
+      throw new Error('Network error (CORS or auth). In Apps Script → Deploy settings, make sure “Who has access” is set to “Anyone” (not “Anyone at Gusto”).');
+    }
+    throw e;
+  }
 }
 
 function parseRawTable(rows,isOffers){
@@ -248,6 +258,7 @@ async function loadData(){
   if(!TEAM)return;
   $id('loading').style.display='flex';
   $id('loadMsg').textContent='Loading live data from Greenhouse…';
+  $id('loadHint').textContent='';
   try{
     const [offersRows,hcRows]=await Promise.all([fetchSheet('Offers'),fetchSheet('Open Reqs')]);
     DATA.offers=parseRawTable(offersRows,true);
@@ -255,7 +266,8 @@ async function loadData(){
     $id('asOf').textContent=new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
     renderTeam();
   }catch(err){
-    $id('loadMsg').textContent='⚠ '+err.message;
+    $id('loadMsg').textContent='⚠️ Failed to load data';
+    $id('loadHint').textContent=err.message;
     console.error(err);return;
   }
   $id('loading').style.display='none';
